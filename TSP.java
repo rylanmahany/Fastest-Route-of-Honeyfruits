@@ -9,14 +9,16 @@ public class TSP{
         //creating the graph, taking into consideration AE is not possible, as you would need to pass through C, even on a straight line
         HashMap<String, Integer> graph = new HashMap<String, Integer>();
         graph.put("ab", 80); graph.put("ba", 80);
-        graph.put("ac", 70);graph.put("ca", 70);
+        graph.put("ac", 75);graph.put("ca", 75);
         graph.put("ad", 130);graph.put("da", 130);
+        graph.put("ae", -999);graph.put("ea", -999);
         graph.put("bc", 120);graph.put("cb", 120);
         graph.put("bd", 125);graph.put("db", 125);
         graph.put("be", 205);graph.put("eb", 205);
         graph.put("cd", 75);graph.put("dc", 75);
+        graph.put("ce", 95); graph.put("ec", 95);
         graph.put("de", 95);graph.put("ed", 95);
-        graph.put("ec", -999); graph.put("ce", -999);
+        graph.put("ec", 95); graph.put("ce", 95);
         List<String> aPaths = permutation("bcde");
         List<String> ePaths = permutation("abcd");
         for (String p: aPaths){
@@ -60,9 +62,9 @@ public class TSP{
             int dist = 0;
             for (int j = 0 ; j < paths.size(); j++){
                 dist = 0;
-                for(int i = 1; i <= paths.get(j).length()-1; i++){
-                    head = Character.toString(paths.get(j).charAt(i-1));
-                    tail = Character.toString(paths.get(j).charAt(i));
+                for(int i = 0; i <= paths.get(j).length()-2; i++){
+                    head = Character.toString(paths.get(j).charAt(i));
+                    tail = Character.toString(paths.get(j).charAt(i+1));
                     String lineseg = head+""+tail;
                     dist += graph.get(lineseg);
                 }
