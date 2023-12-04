@@ -4,6 +4,7 @@ Finding the shortest path to pick up fruits, with a graph theory perspective.
 Skills:  Java, Graph Theory, Geometry.
 
 There are 3 files in this Repo:
+
 README - a short explaination of the Repo.
 
 TSP.java - a java simulation of the Travelling Salesman Problem for a specific case I discovered.
