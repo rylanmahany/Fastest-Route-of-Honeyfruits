@@ -3,7 +3,7 @@ Finding the shortest path to pick up fruits, with a graph theory perspective.
 
 Skills:  Java, Graph Theory, Geometry.
 
-There are 3 files in this Repo:
+Contains 3 files:
 
 README - a short explaination of the Repo.
 
