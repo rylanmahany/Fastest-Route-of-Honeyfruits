@@ -1,0 +1,6 @@
+The goal of this project is to find the shortest path between a group of points, only touching each once.
+
+This repo contains three files:
+README.txt an overview of the repo
+TSP.txt includes a Java program to find the fastest routes to the fruits from points A and E.
+report.pdf is a more deeper diver into how the algorithm works, as well as the limitations and expansions of the solution.
